@@ -2,7 +2,9 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2E4374">
+    <meta name="format-detection" content="telephone=no">
     <title>STROM & GAS Tarife optimieren | TarifWechsler</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -720,6 +722,43 @@
                 dot.classList.add('active');
                 // Hier würde normaler Code für das Slider-Verhalten stehen
             });
+        });
+        
+        // Bildoptimierung für Mobile
+        window.addEventListener('DOMContentLoaded', function() {
+            // Lazy Loading für Bilder
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    img.loading = 'lazy';
+                });
+            } else {
+                // Fallback für Browser, die lazy loading nicht unterstützen
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+                document.body.appendChild(script);
+            }
+            
+            // Mobile View Optimierung
+            const viewportMeta = document.querySelector('meta[name="viewport"]');
+            if (window.innerWidth < 400) {
+                // Optimierter Viewport für sehr kleine Bildschirme
+                viewportMeta.content = 'width=device-width, initial-scale=0.86, maximum-scale=1.0, user-scalable=no';
+            }
+            
+            // Performance-Optimierung für Mobile - Animations-Deaktivierung
+            if (window.innerWidth < 768) {
+                document.body.classList.add('mobile-view');
+                
+                // Event-Verzögerung reduzieren
+                const enhanceTouch = () => {
+                    const touchTargets = document.querySelectorAll('a, button, .btn, .faq-question');
+                    touchTargets.forEach(el => {
+                        el.addEventListener('touchstart', () => {}, { passive: true });
+                    });
+                };
+                enhanceTouch();
+            }
         });
     </script>
 </body>

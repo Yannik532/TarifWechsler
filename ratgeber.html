@@ -2,8 +2,10 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratgeber - TarifWechsler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2E4374">
+    <meta name="format-detection" content="telephone=no">
+    <title>Tipps & Rechner - TarifWechsler</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -293,7 +295,7 @@
         }
         
         /* Die normalen Info-Boxen mit den Symbolen jetzt etwas dunkleres Grau transparent */
-        .reason-card, .tip-card, .eco-label, .compare-step .compare-content {
+        .reason-card, .tip-card, .eco-label, .compare-step .compare-content, .eco-content {
             background-color: rgba(230, 230, 230, 0.85);
             backdrop-filter: blur(2px);
             border-radius: var(--radius);
@@ -635,7 +637,7 @@
                         
                         <div class="eco-info">
                             <div class="eco-image">
-                                <img src="images/Energieberatung.jpeg" alt="Ökostrom">
+                                <img src="images/oekostrom.jpeg" alt="Ökostrom">
                             </div>
                             <div class="eco-content">
                                 <h3>Was ist echter Ökostrom?</h3>
@@ -643,23 +645,23 @@
                                 
                                 <h3>Auf diese Siegel können Sie vertrauen:</h3>
                                 <div class="eco-labels">
-                                    <div class="eco-label">
+                                    <div class="eco-label" style="background-color: #444444; color: white;">
                                         <i class="fas fa-check-circle"></i>
                                         <span>Grüner Strom Label</span>
                                     </div>
-                                    <div class="eco-label">
+                                    <div class="eco-label" style="background-color: #444444; color: white;">
                                         <i class="fas fa-check-circle"></i>
                                         <span>ok-power</span>
                                     </div>
-                                    <div class="eco-label">
+                                    <div class="eco-label" style="background-color: #444444; color: white;">
                                         <i class="fas fa-check-circle"></i>
                                         <span>TÜV-Zertifizierung</span>
                                     </div>
                                 </div>
                                 
-                                <div class="eco-myth">
-                                    <h3>Mythos: "Ökostrom ist immer teurer"</h3>
-                                    <p>Falsch! Viele Ökostromtarife sind mittlerweile genauso günstig oder sogar günstiger als konventionelle Angebote. Mit unserer Beratung finden Sie garantiert einen passenden Ökostromtarif zu einem attraktiven Preis.</p>
+                                <div class="eco-myth" style="border: 2px solid #FF6B00; border-radius: 10px; padding: 15px; margin-top: 15px;">
+                                    <h3 style="color: #FF6B00;">Mythos: "Ökostrom ist immer teurer"</h3>
+                                    <p style="color: #FF6B00;">Falsch! Viele Ökostromtarife sind mittlerweile genauso günstig oder sogar günstiger als konventionelle Angebote. Mit unserer Beratung finden Sie garantiert einen passenden Ökostromtarif zu einem attraktiven Preis.</p>
                                 </div>
                             </div>
                         </div>
